@@ -4,3 +4,15 @@
   margin-left: 25%;
   padding: 10px;
 }
+
+h1 button {
+  font: inherit;
+  cursor: pointer;
+  padding: 0.1rem 0.7rem;
+  border: 1px solid #40005d;
+  background-color: #40005d;
+  color: white;
+  border-radius: 12px;
+  margin-top: 1.4rem;
+  margin-left: 50%;
+}
