@@ -4,6 +4,7 @@ import Card from '../utils/Card'
 
 import ExpenseFilter from './ExpenseFilter';
 import ExpensesList from './ExpensesList';
+import ExpensesChart from './ExpensesChart';
 
 const Expense = ({ expenses }) => {
     const [filterYear, setFilterYear] = useState('')
@@ -17,6 +18,7 @@ const Expense = ({ expenses }) => {
     return (
         <div>
             <Card className="expenses">
+                {filterYear != '' && <ExpensesChart expenses={filterView}/>}
                 <ExpenseFilter defaultYear='' onFilterYearChange={handleFilterYearChange}/>
                 <ExpensesList items={filterView}/>
             </Card>

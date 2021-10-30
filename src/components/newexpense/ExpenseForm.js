@@ -12,7 +12,7 @@ const ExpenseForm = (props) => {
 
     const onSubmitHandler = (event) => {
         event.preventDefault()
-        const newExpense = {id : Math.random() * 100, title : newTitle, amount : newAmount, date : new Date(newDate) }
+        const newExpense = {id : Math.random() * 100, title : newTitle, amount : +newAmount, date : new Date(newDate) }
         props.addExpense(newExpense);
         setTitle('')
         setAmount('')

@@ -42,9 +42,12 @@ function App() {
   const toggleForm = () => {
     setShowForm((prevShowForm) => !prevShowForm)
   }
+
+  const showCharacter = showForm ? '\u2750' : '\u274F'
+  const hoverText = showForm ? 'Close Form' : 'Add Expense'
   return (
     <div className="App">
-      <h1>Expense Tracker <button onClick={toggleForm} title='Add Expense'> {showForm ? '-' : '+'} </button></h1>
+      <h1>Expense Tracker <button onClick={toggleForm} title={hoverText}>{showCharacter}</button></h1>
       {showForm && <NewExpense addToExpenses={addToExpenses} />}
       <Expenses expenses={expenses}/>
     </div>
